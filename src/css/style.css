@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  background-color: #C5E4E7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* :first-child {
+  margin-top: 0;
+}
+
+* :last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
