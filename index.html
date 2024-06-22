@@ -21,32 +21,31 @@
 
   <div class="app">
     <header class="header">
-      <h1 class="header__title">SPLI<br/>TTER</h1>
+      <img src="./images/logo.svg" alt="Logo" class="header__logo"/>
     </header>
 
     <main class="main">
       <div class="main__col-1">
-        <div class="main__input-container">
-          <label class="main__input-label" for="input-bill">Bill</label>
+        <div class="main__input-container main__input-container-bill">
+          <div class="main__input-top"><label class="main__input-label" for="input-bill">Bill</label><p class="main__input-error">Can't be zero</p></div>
           <input type="number" class="main__input" id="input-bill"/>
-          <p class="main__input-error">Can't be zero</p>
         </div>
         <div class="main__tip-select">
           <h3 class="main__tip-select__title">Select Tip %</h3>
           <div class="main__tip-select__grid">
-            <button class="main__tip-select__btn">5%</button>
-            <button class="main__tip-select__btn">10%</button>
-            <button class="main__tip-select__btn">15%</button>
-            <button class="main__tip-select__btn">25%</button>
-            <button class="main__tip-select__btn">50%</button>
+            <button class="main__tip-select__btn" data-value="5">5%</button>
+            <button class="main__tip-select__btn" data-value="10">10%</button>
+            <button class="main__tip-select__btn" data-value="15">15%</button>
+            <button class="main__tip-select__btn" data-value="25">25%</button>
+            <button class="main__tip-select__btn" data-value="50">50%</button>
             <input type="number" class="main__tip-select__custom"/>
           </div>
         </div>
 
-        <div class="main__input-container">
-          <label class="main__input-label" for="input-num">Number of People</label>
+        <div class="main__input-container main__input-container-num">
+          <div class="main__input-top"><label class="main__input-label" for="input-num">Number of People</label><p class="main__input-error">Can't be zero</p></div>
           <input type="number" class="main__input" id="input-num"/>
-          <p class="main__input-error">Can't be zero</p>
+          
         </div>
 
       </div>
