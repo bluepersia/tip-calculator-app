@@ -7,7 +7,7 @@ $color-Grayishcyan: hsl(184, 14%, 56%);
 $color-Lightgrayishcyan: hsl(185, 41%, 84%);
 $color-Verylightgrayishcyan: hsl(189, 41%, 97%);
 $color-White: hsl(0, 0%, 100%);
-
+$color-Red: #E17457;
 
 body {
     margin: 0;
@@ -17,6 +17,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    color: $color-Darkgrayishcyan;
 }
 
 * {

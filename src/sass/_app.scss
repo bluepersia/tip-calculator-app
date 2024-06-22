@@ -1,0 +1,87 @@
+
+
+.header 
+{
+    text-align: center;
+    
+    padding: 3.1rem 0 2.6rem;
+}
+
+
+.main
+{
+    background-color: $color-White;
+    padding: 2rem;
+    border-radius: 25px;
+
+
+
+    &__input 
+    {
+        &-container 
+        {
+            position: relative;
+
+            &.invalid 
+            {
+                .input-error
+                {
+                    opacity: 100%;
+                }
+            }
+
+            &::before 
+            {
+                content: '';
+                position: absolute;
+                left: 1.18rem;
+                bottom: 0px;
+                transform: translateY(100%);
+            }
+
+            &-bill::before
+            {
+                width: 10px;
+                height: 16px;
+                background-image: url(../../images/icon-dollar.svg);
+            }
+        }
+        &-label 
+        {
+            display: block;
+        }
+
+        &-top
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: .375rem;
+        }
+
+        &-error
+        {
+            margin-top: 0;
+            color: $color-Red;
+            opacity: 0%;
+        }
+
+        &:focus 
+        {
+            outline: solid 2px $color-Strong-cyan;
+        }
+
+        width: 100%;
+        padding: .375rem 1.125rem;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-Verydarkcyan;
+        background-color: $color-Verylightgrayishcyan;
+        border:none;
+        text-align: right;
+        border-radius: 5px;
+    }
+}
+
+
