@@ -1,0 +1,34 @@
+$color-Strong-cyan: hsl(172, 67%, 45%);
+$color-bg: #C5E4E7;
+
+$color-Verydarkcyan: hsl(183, 100%, 15%);
+$color-Darkgrayishcyan: hsl(186, 14%, 43%);
+$color-Grayishcyan: hsl(184, 14%, 56%);
+$color-Lightgrayishcyan: hsl(185, 41%, 84%);
+$color-Verylightgrayishcyan: hsl(189, 41%, 97%);
+$color-White: hsl(0, 0%, 100%);
+
+
+body {
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    background-color: $color-bg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+* :first-child 
+{
+  margin-top: 0;  
+}
+
+* :last-child 
+{
+    margin-bottom: 0;
+}
