@@ -5,6 +5,11 @@
     text-align: center;
     
     padding: 3.1rem 0 2.6rem;
+
+    &__logo
+    {
+        width: 87px;
+    }
 }
 
 
@@ -14,7 +19,12 @@
     padding: 2rem;
     border-radius: 25px;
 
-
+    &__col-1
+    {
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+    }
 
     &__input 
     {
@@ -36,7 +46,8 @@
                 position: absolute;
                 left: 1.18rem;
                 bottom: 0px;
-                transform: translateY(100%);
+                transform: translateY(-100%);
+                background-size: cover;
             }
 
             &-bill::before
@@ -45,9 +56,16 @@
                 height: 16px;
                 background-image: url(../../images/icon-dollar.svg);
             }
+            &-num::before
+            {
+                width: 13px;
+                height: 16px;
+                background-image: url(../../images/icon-person.svg);
+            }
         }
         &-label 
         {
+            @extend .heading-2;
             display: block;
         }
 
@@ -70,11 +88,10 @@
         {
             outline: solid 2px $color-Strong-cyan;
         }
-
+        @extend .value-1;
         width: 100%;
         padding: .375rem 1.125rem;
         font-family: inherit;
-        font-size: 1.5rem;
         font-weight: bold;
         color: $color-Verydarkcyan;
         background-color: $color-Verylightgrayishcyan;
@@ -82,6 +99,169 @@
         text-align: right;
         border-radius: 5px;
     }
+
+
+    &__tip-select
+    {
+        &__title
+         {
+            @extend .heading-2;
+         }
+
+         &__grid
+         {
+            display: grid;
+            justify-content: space-between;
+            row-gap: 1rem;
+            grid-template-columns: 47.2% 47.2%;
+         }
+         &__btn
+         {
+            @extend .value-1;
+            cursor: pointer;
+            background-color: $color-Verydarkcyan;
+            padding: .375rem 1rem;
+            font-family: inherit;
+            color: $color-White;
+            border-radius: 5px;
+            border:none;
+            transition: all 300ms;
+
+            &:hover
+            {
+                background-color: $color-btnhover;
+                color: $color-Verydarkcyan;
+            }
+         }
+
+         &__custom 
+         {
+            @extend .value-1;
+            font-family: inherit;
+            text-align: center;
+            background-color: $color-custombg;
+            border:none;
+            color: $color-customtext;
+            border-radius: 5px;
+
+            &:focus
+            {
+                outline: solid 2px $color-Strong-cyan;
+            }
+         }
+    }
+
+    &__col-2 
+    {
+        background-color: $color-Verydarkcyan;
+        border-radius: 15px;
+        padding: 2.31rem 1.5rem 1.5rem;
+        color: $color-White;
+
+        &__entry 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__entry-1 
+        {
+            margin-bottom: 1.25rem
+        }
+
+        &__key 
+        {
+            @extend .heading-2;
+            font-size: 1rem;
+            color:$color-White;
+            margin-bottom: 0;
+
+            & span
+            {
+                color: $color-perperson;
+                font-size: .81rem;
+            }
+        }
+
+        &__value 
+        {
+            margin-top: 0;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $color-Strong-cyan;
+        }
+    }
+
+    &__btn-reset 
+    {
+        background-color: $color-Strong-cyan;
+        width: 100%;
+        border:none;
+        font-family: inherit;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        padding: .56rem;
+        border-radius: 5px;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: all 300ms;
+
+        &:hover 
+        {
+            background-color: $color-btnhover;
+        }
+    }
 }
 
 
+
+
+
+
+@media (min-width: 1440px)
+{
+    .app
+    {
+        min-width: 920px;
+    }
+
+
+    .header 
+    {
+        padding: 5.4rem 0;
+    }
+
+    .main {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__col-1
+        {
+            width:  45.1%;
+
+           gap:2.5rem;
+        }
+
+        &__col-2
+        {
+            width: 49.1%;
+
+            &__entry-1
+            {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+
+        &__tip-select 
+        {
+            &__grid
+            {
+                grid-template-columns: repeat(3, 30.8%);
+            }
+        }
+
+    
+    }
+}
