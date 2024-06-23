@@ -32,11 +32,16 @@
         {
             position: relative;
 
-            &.invalid 
+            &--invalid 
             {
-                .input-error
+                .main__input-error
                 {
                     opacity: 100%;
+                }
+
+                .main__input 
+                {
+                    outline: solid 2px $color-Red;
                 }
             }
 
@@ -132,6 +137,11 @@
                 background-color: $color-btnhover;
                 color: $color-Verydarkcyan;
             }
+
+            &--active 
+            {
+                background-color: $color-Strong-cyan;
+            }
          }
 
          &__custom 
@@ -209,6 +219,11 @@
         &:hover 
         {
             background-color: $color-btnhover;
+        }
+
+        &:disabled
+        {
+            opacity: 50%;
         }
     }
 }

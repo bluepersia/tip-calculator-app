@@ -64,8 +64,11 @@ body {
 .main__input-container {
   position: relative;
 }
-.main__input-container.invalid .input-error {
+.main__input-container--invalid .main__input-error {
   opacity: 100%;
+}
+.main__input-container--invalid .main__input {
+  outline: solid 2px #E17457;
 }
 .main__input-container::before {
   content: "";
@@ -122,6 +125,9 @@ body {
   background-color: hsl(173, 61%, 77%);
   color: hsl(183, 100%, 15%);
 }
+.main__tip-select__btn--active {
+  background-color: hsl(172, 67%, 45%);
+}
 .main__tip-select__custom {
   font-family: inherit;
   text-align: center;
@@ -177,6 +183,9 @@ body {
 }
 .main__btn-reset:hover {
   background-color: hsl(173, 61%, 77%);
+}
+.main__btn-reset:disabled {
+  opacity: 50%;
 }
 
 @media (min-width: 1440px) {
