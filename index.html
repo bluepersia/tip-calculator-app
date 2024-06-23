@@ -25,43 +25,43 @@
     </header>
 
     <main class="main">
-      <div class="main__col-1">
+      <form class="main__col-1">
         <div class="main__input-container main__input-container-bill">
           <div class="main__input-top"><label class="main__input-label" for="input-bill">Bill</label><p class="main__input-error">Can't be zero</p></div>
-          <input type="number" class="main__input" id="input-bill" placeholder="0"/>
+          <input type="number" class="main__input" id="input-bill" min="0" placeholder="0"/>
         </div>
         <div class="main__tip-select">
           <h3 class="main__tip-select__title">Select Tip %</h3>
           <div class="main__tip-select__grid">
-            <button class="main__tip-select__btn" data-value="5">5%</button>
-            <button class="main__tip-select__btn" data-value="10">10%</button>
-            <button class="main__tip-select__btn" data-value="15">15%</button>
-            <button class="main__tip-select__btn" data-value="25">25%</button>
-            <button class="main__tip-select__btn" data-value="50">50%</button>
+            <button class="main__tip-select__btn" data-value="0.05">5%</button>
+            <button class="main__tip-select__btn" data-value="0.1">10%</button>
+            <button class="main__tip-select__btn" data-value="0.15">15%</button>
+            <button class="main__tip-select__btn" data-value="0.25">25%</button>
+            <button class="main__tip-select__btn" data-value="0.5">50%</button>
             <input type="number" class="main__tip-select__custom" placeholder="Custom"/>
           </div>
         </div>
 
         <div class="main__input-container main__input-container-num">
           <div class="main__input-top"><label class="main__input-label" for="input-num">Number of People</label><p class="main__input-error">Can't be zero</p></div>
-          <input type="number" class="main__input" id="input-num" placeholder="0"/>
-          
+          <input type="number" class="main__input" min="0" id="input-num" placeholder="0"/>
         </div>
 
-      </div>
+      </form>
       <div class="main__col-2">
         <div class="main__col-2__entry main__col-2__entry-1">
           <h3 class="main__col-2__key">Tip Amount<br/><span>/ person</span></h3>
-          <p class="main__col-2__value">$0.00</p>
+          <p class="main__col-2__value" id="tip-per-person">$0.00</p>
         </div>
         <div class="main__col-2__entry">
           <h3 class="main__col-2__key">Total<br/><span>/ person</span></h3>
-          <p class="main__col-2__value">$0.00</p>
+          <p class="main__col-2__value" id="total-per-person">$0.00</p>
         </div>
         <button class="main__btn-reset">Reset</button>
       </div>
     </main>
   </div>
 
+  <script src="./src/app.js"></script>
 </body>
 </html>
